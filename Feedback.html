@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #e6f2ff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .feedback-container {
+      background-color: #ffffff;
+      max-width: 700px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.1);
+      border: 2px solid #cce6ff;
+    }
+
+    .feedback-container h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .feedback-container p {
+      text-align: center;
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #004080;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 10px;
+      border: 1px solid #99ccff;
+      background-color: #f0f8ff;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .slider-label {
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #004080;
+    }
+
+    input[type=range] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .emoji-options {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+      font-size: 24px;
+    }
+
+    .emoji-options span {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .emoji-options span:hover {
+      transform: scale(1.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .feedback-container {
+        padding: 20px;
+      }
+
+      .emoji-options {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feedback-container">
+    <h2>💬 We Value Your Feedback!</h2>
+    <p>Help us improve by sharing your thoughts. We're all ears 👂</p>
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">How was your experience?</label>
+        <div class="emoji-options">
+          <span title="Excellent">😄</span>
+          <span title="Good">🙂</span>
+          <span title="Okay">😐</span>
+          <span title="Bad">😕</span>
+          <span title="Terrible">😡</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="slider-label" for="rating">Overall Rating: <span id="rating-value">5</span>/10</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" value="5" oninput="document.getElementById('rating-value').innerText = this.value">
+      </div>
+
+      <div class="form-group">
+        <label for="improvements">What can we do better?</label>
+        <textarea id="improvements" name="improvements" placeholder="Be honest! We love constructive feedback."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="favorite">What did you love the most?</label>
+        <select id="favorite" name="favorite">
+          <option value="">-- Select one --</option>
+          <option value="website">Website Design</option>
+          <option value="support">Customer Support</option>
+          <option value="ease">Ease of Booking</option>
+          <option value="offers">Offers & Discounts</option>
+        </select>
+      </div>
+
+      <button type="submit">🚀 Submit Feedback</button>
+    </form>
+  </div>
+
+</body>
+</html>

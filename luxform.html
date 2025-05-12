@@ -1,0 +1,311 @@
+                                                                                                    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Booking Form ✨</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: backgroundFade 10s infinite alternate ease-in-out;
+    }
+
+    @keyframes backgroundFade {
+      0% { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+      100% { background: linear-gradient(to right, #a6c1ee, #fbc2eb); }
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 800px;
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 0.8s ease-in-out;
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4b91;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 16px rgba(255, 75, 145, 0.5);
+      animation: bounce 2s infinite;
+    }
+
+    h1 {
+      text-align: center;
+      color: #3a3a8f;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6a6a6a;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+      color: #3a3a8f;
+      margin-top: 10px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #3a3a8f;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    input:hover, select:hover, textarea:hover {
+      background-color: #f5f7ff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #3a3a8f;
+      box-shadow: 0 0 0 4px rgba(58, 58, 143, 0.2);
+      outline: none;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #3a3a8f;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:invalid {
+      border-color: red;
+    }
+
+    input:valid {
+      border-color: green;
+    }
+    /* Style the multi-select dropdown */
+#Destination {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style the individual options */
+#Destination option {
+  padding: 8px;
+}
+
+/* Hover effect */
+#Destination:hover {
+  border-color: #45a049;
+}
+
+/* Focus effect */
+#Destination:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3a3a8f;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2a2a6f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+
+      input, select, textarea {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      form {
+        gap: 16px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .badge {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🎉 Best Seller! 10% OFF</div>
+    <div class="image-container">
+      <img src="https://wallpapers.com/images/featured/travel-laptop-0m6r2w9ywrwtb81n.jpg " alt="Paris Night" />
+    </div>
+    <h1>🌟 Book Your Dream Trip! 🌟</h1>
+    <p class="subtitle">🚀 Book now and enjoy a 10% early bird discount! 🍷🗼✨</p>
+
+    <form>
+        <fieldset>
+        <legend>Luxury package</legend>
+        <h2>👤 Personal Informations</h2>
+        <label for="text">Full Name</label>
+        <input type="text"  name="Fullname" id="text" required>
+        <label>Aadhar Number</label>
+        <input type="text" name="Aadharnum"required>
+        <label>Passport Number</label>
+        <input type="text" name="Passportnum" required>
+  
+        <h2>📧 Contact Informations</h2>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+  
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter 10-digit phone number" placeholder="9876543210" />
+  
+        <h2>🌍 Trip Details</h2>
+      <label for="Destination">Destination</label>
+      <select name="Destination" id="Destination" multiple required>
+        <option value="paris">Leh-Ladhak</option>
+        <option value="tokyo">Kerala</option>
+        <option value="new_york">Agra</option>
+        <option value="rome">Andaman and Nicobar Islands</option>
+        <option value="bali">Kyoto</option>
+        <option>Santorini</option>
+        <option>New zealand</option>
+        <option>Rome</option>
+      </select>
+          
+  
+        <label for= "numT">Number of Travelers</label>
+        <input type="number" min="1" id="numT" required>
+        <label for="dd">Departure Date</label>
+        <input type="date"id="dd" required>
+  
+        <label for="rd">Return Date</label>
+        <input type="date" id="rd" required>
+  
+        <label class="checkbox" for="TC">
+          I agree to the <a href="terms.html" target="_blank">terms & conditions</a>
+          <input type="checkbox" id="TC" name="TC" required>
+        </label>
+      <button type="button" onclick="window.location.href='payment.html'">💳 Proceed to Payment</button>
+    </fieldset>
+    </form>
+  </div>
+</body>
+</html>

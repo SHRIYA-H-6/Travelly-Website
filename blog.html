@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travelly | Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #a0e7e5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #a0e7e5;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      color: #4b3f72;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #4b3f72;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post {
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 2rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .blog-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .travel-stories,
+    .travel-tips {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .story, .tip {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .story:hover, .tip:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .story h3, .tip h3 {
+      font-size: 1.3rem;
+      color: #4b3f72;
+      margin-bottom: 0.5rem;
+    }
+
+    .story p, .tip p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .blog-buttons {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-buttons .btn {
+      display: inline-block;
+      background-color: #4b3f72;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .blog-buttons .btn:hover {
+      background-color: #362e5c;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #dfeefc;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
+      }
+
+      .blog-post img {
+        height: 200px;
+      }
+
+      header h2 {
+        font-size: 2rem;
+      }
+
+      .blog-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .blog-buttons .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>Travelly 🌍</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Destinations.html">Destinations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="Packages.html">Packages</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h2>📝 Travel Blog 🌍</h2>
+    <p>Real stories, practical tips & travel inspiration from around the globe.</p>
+  </header>
+
+  <!-- Blog Posts -->
+  <div class="container">
+    <div class="blog-post">
+        <img src="https://lp-cms-production.imgix.net/2025-03/Shutterstock92342251.jpg?auto=format&fit=crop&w=1600&q=80" alt="Santorini, Greece">
+      <div class="blog-content">
+        <h3>Exploring the Wonders of Santorini</h3>
+        <p>Santorini is known for its white-washed houses, stunning sunsets, and crystal-clear waters. This iconic Greek island offers mesmerizing views of the caldera and Aegean Sea.</p>
+        <p>Santorini is not just a destination; it’s a dream come true. The striking contrast between the whitewashed buildings and the vibrant blue of the Aegean Sea creates a breathtaking view. Every sunset in Santorini is a spectacular sight, as the sun dips behind the caldera, casting golden hues over the island.</p>
+        <p>Renowned for its unique volcanic landscape, Santorini offers visitors the chance to explore black sand beaches, ancient ruins, and charming villages perched on cliffs. Whether you’re savoring fresh seafood or walking through narrow streets lined with boutiques, Santorini has something for everyone.</p>
+        <p>Santorini’s rich history is evident in its archaeological sites, such as the ancient city of Akrotiri, a preserved Minoan settlement buried by a volcanic eruption. The island’s blend of historical wonders and natural beauty makes it a must-visit destination in Greece.</p>
+        <p>The island is also famous for its wine, particularly Assyrtiko, a white grape variety that grows in the island’s volcanic soil. Wine enthusiasts can enjoy a wine-tasting tour, sipping locally produced wines while soaking in the scenic views.</p>
+
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://cdn-imgix.headout.com/media/images/33b1833b42e8af419d4a0d8897eb2c48-This%20is%20a%20Photograph%20of%20St.%20Vitus%20Cathedral.jpg?auto=format&q=90&fit=crop" alt="Prague, Czech Republic" alt="Prague, Czech Republic">
+      <div class="blog-content">
+        <h3>Discovering the Hidden Gems of Prague</h3>
+        <p>Prague is a city where history and beauty intertwine. Its skyline is adorned with fairy-tale spires, centuries-old churches, and the majestic Prague Castle.</p>
+        <p>Prague is often referred to as the ‘City of a Hundred Spires’ because of its stunning skyline filled with medieval towers, baroque churches, and gothic spires. Walking along its cobblestone streets feels like stepping back in time to the medieval heart of Europe.</p>
+        <p>One of the most iconic landmarks in Prague is the Charles Bridge, a historic stone bridge adorned with statues of saints that stretches across the Vltava River, offering panoramic views of the city’s Old Town and Prague Castle.</p>
+        <p>Prague’s Old Town Square is a lively hub filled with colorful buildings, outdoor cafés, and the famous Astronomical Clock, which draws crowds each hour to watch its mechanical procession. The square’s charm makes it a perfect spot to soak in the city’s atmosphere.</p>
+        <p>The city is also renowned for its beer culture. With a long tradition of brewing, Prague is home to some of the world’s finest pilsners and a vibrant pub scene. A visit to a traditional Czech pub is a must for beer lovers.</p>
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://res.cloudinary.com/aenetworks/image/upload/v1/the-sphinx-gettyimages-1183584133" alt="Pyramids of Egypt">
+      <div class="blog-content">
+        <h3>🌍 Exploring the Wonders of Egypt</h3>
+        <p>Egypt is home to some of the most iconic monuments in the world, including the Great Pyramids. Journey through ancient tombs, temples, and the mystical Nile River.</p>
+        <p>Egypt is the land of ancient mysteries and timeless wonders. The Great Pyramids of Giza, one of the Seven Wonders of the Ancient World, continue to awe visitors with their sheer size and intricate design. Standing before them, you can’t help but feel a sense of awe at the engineering marvels of ancient Egypt.</p>
+        <p>Beyond the pyramids, Egypt offers a treasure trove of ancient monuments, including the majestic temples of Luxor, the Valley of the Kings, and the colossal statues of Ramses II at Abu Simbel. These historical sites tell the story of Egypt’s rich and powerful past.</p>
+        <p>Cruising the Nile River offers a unique way to experience Egypt’s ancient history. A traditional Nile cruise takes you past temples, tombs, and villages, allowing you to witness the beauty of the desert landscape and the fertile banks of the river.</p>
+        <p>Egypt’s bustling cities, like Cairo, offer a vibrant mix of old and new, where you can explore the ancient Islamic Cairo district, shop in the lively markets of Khan El Khalili, and experience the vibrant culture of this diverse country.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Travel Stories -->
+  <div class="container">
+    <h2 class="section-title">📖 Travel Stories</h2>
+    <div class="travel-stories">
+      <div class="story">
+        <h3>My Backpacking Adventure in South America</h3>
+        <p>From hiking the Inca Trail to exploring the Amazon rainforest, it was life-changing.</p>
+      </div>
+      <div class="story">
+        <h3>Solo Travel in Japan 🇯🇵</h3>
+        <p>Exploring Tokyo, Kyoto, and Osaka alone taught me resilience and joy in discovery.</p>
+      </div>
+      <div class="story">
+        <h3>A Journey Through Europe 🇪🇺</h3>
+        <p>From Prague’s charm to Venice’s canals, every day brought something new.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Travel Tips -->
+  <div class="container">
+    <h2 class="section-title">✈ Travel Tips</h2>
+    <div class="travel-tips">
+      <div class="tip"><h3>1. Pack Light</h3><p>Traveling light saves time and hassle. Use packing cubes!</p></div>
+      <div class="tip"><h3>2. Carry a Power Bank</h3><p>Don’t get stranded with a dead phone. Always carry a charger.</p></div>
+      <div class="tip"><h3>3. Learn Basic Phrases</h3><p>A few local words go a long way in making friends!</p></div>
+      <div class="tip"><h3>4. Use Public Transport</h3><p>It’s affordable, efficient, and a window into local life.</p></div>
+      <div class="tip"><h3>5. Stay Hydrated</h3><p>Especially when traveling in hot climates — drink water often.</p></div>
+    </div>
+  </div>
+
+  <!-- Buttons at Bottom -->
+  <div class="blog-buttons">
+    <a href="whychooseus.html" class="btn">💡 Why Choose Us</a>
+    <a href="gallery.html" class="btn">🖼 Gallery</a>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Travelly. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏯 Tokyo Combo Package 🎌</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+  background: linear-gradient(to right, #f8c8d2, #f78c8d); /* light pink to light red */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+
+    .container {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4081;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 16px rgba(255, 64, 129, 0.4);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a2d55;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6c4b6e;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .description p {
+      font-size: 1rem;
+      color: #4a2d55;
+    }
+
+    form {
+  display: grid;
+  gap: 20px;
+  background-color: #fef6fb; /* pastel pink form background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 192, 203, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+label {
+  font-weight: 600;
+  color: #4a2d55;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6d3f0;
+  background-color: #f3f7ff; /* soft pastel blue */
+  transition: all 0.3s ease;
+  color: #4a2d55;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #c47ad4;
+  box-shadow: 0 0 0 3px rgba(196, 122, 212, 0.2);
+  outline: none;
+}
+
+.date-range input {
+  background-color: #f3f7ff;
+  border: 1px solid #d6d3f0;
+  color: #4a2d55;
+}
+
+button {
+  padding: 14px;
+  background-color: #db78a0; /* pastel magenta/pink */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #b75e84;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4a2d55;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🌸 Limited Offer!</div>
+    <div style="width: 100%; max-height: 320px; overflow: hidden; border-radius: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); margin-bottom: 30px;">
+      <img src="https://www.hilton.com/im/en/NoHotel/19361896/shutterstock-667925704.jpg?impolicy=crop&cw=3800&ch=2533&gravity=NorthWest&xposition=0&yposition=1&rw=1280&rh=856" alt="Tokyo Skyline with Cherry Blossoms" style="width: 100%; height: auto; object-fit: cover;" />
+    </div>
+
+    <h1>🏯 Tokyo All-Inclusive Combo 🎌</h1>
+    <p class="subtitle">🗼 4 Days, 3 Nights | ₹1,20,000 Per Person 🌸</p>
+
+    <div class="description">
+      <p>Includes luxury hotel stay, guided city tours, daily breakfast, and complimentary airport transfers! 
+         <strike>₹1,20,000</strike> <span style="color: #ff4081; font-weight: bold;">Special Price: ₹90,000 per person (25% OFF!)</span></p>
+    </div>
+
+    <form>
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Sakura Tanaka" required />
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" name="email" placeholder="e.g. sakura@example.com" required />
+
+      <label for="aadhaar">🇮🇳 Aadhaar Number</label>
+      <input type="text" id="aadhaar" name="aadhaar" placeholder="XXXX-XXXX-XXXX" required />
+
+      <label for="passport">🛂 Passport Number</label>
+      <input type="text" id="passport" name="passport" placeholder="e.g. T1234567" required />
+
+      <label for="people">👥 Number of People</label>
+      <input type="number" id="people" name="people" min="1" placeholder="e.g. 2" required />
+
+      <label for="stay">📅 Stay Duration</label>
+      <div class="date-range">
+        <input type="date" name="from" required />
+        <input type="date" name="to" required />
+      </div>
+
+      <label for="requests">🎌 Special Requests</label>
+      <textarea id="requests" rows="4" name="requests" placeholder="Any special arrangements or needs..."></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" required />
+        I agree to the <a href="terms.html" target="_blank">terms and conditions</a>
+      </label>
+
+      <button type="submit">🏯 Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>

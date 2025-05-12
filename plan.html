@@ -1,0 +1,318 @@
+//Plan.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip</title>
+    <style>
+      /* Global styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #a0e7e5;
+    }
+
+    .destinations {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+      background-size: cover;
+      color: #4b3f72;
+    }
+
+    .plan {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: url('https://png.pngtree.com/background/20250206/original/pngtree-yellow-sun-almost-down-horizon-over-deep-blue-sea-atmospheric-view-picture-image_15703335.jpg') no-repeat center center;
+      background-size: cover;
+      color: #4b3f72;
+    }
+
+    h2, .sub-head {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #4b3f72;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+      text-align: left;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem 1rem 0.5rem;
+      color: #3e8e7e;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      padding: 0 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card ul {
+    color: #555; 
+    font-size: 0.95rem;
+    margin: 0;
+    list-style-type: circle;
+    padding: 0 2rem 1.5rem;
+} 
+
+    .animated-btn {
+      position: relative;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+      transition: transform 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin: 1rem;
+    }
+
+    .animated-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10.01%);
+      background-size: 10% 10%;
+      z-index: 0;
+    }
+
+    .animated-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(100%, 100%);
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .destinations {
+        padding: 2rem 1rem;
+      }
+
+      h2, .sub-head {
+        font-size: 1.5rem;
+      }
+
+      .animated-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card img {
+        height: 150px;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+      }
+    }
+    </style>>
+</head>
+<body>
+  <section class="plan">
+    <h3 class="sub-head">In India</h3>
+    <div class="cards">
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal in Agra" />
+        <h3>Agra</h3>
+        <p style="padding: 0 1rem 0rem; ">Agra, in Uttar Pradesh, is home to the iconic Taj Mahal, a symbol of eternal love and a UNESCO World Heritage Site. The city showcases Mughal architecture, rich history, and vibrant markets, making it a must-visit for cultural enthusiasts.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Agra Fort</li>
+            <li>Mehtab Bagh</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Visit the Taj Mahal early morning to avoid crowds.</li>
+          <li>Wear comfortable footwear for exploring historical sites.</li>
+          <li>Stay hydrated and protect yourself from the sun.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://plutotours.in/places/wp-content/uploads/2024/01/Tso-Moriri-2.webp" alt="Leh-Ladakh landscape" />
+        <h3>Leh-Ladakh</h3>
+        <p style="padding: 0 1rem 0rem; ">Leh-Ladakh, known as "Little Tibet," offers breathtaking landscapes, ancient monasteries, and a unique blend of cultures. Its high-altitude deserts and serene lakes make it a haven for adventurers and spiritual seekers alike.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Pangong Lake</li>
+            <li>Leh Palace</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Acclimatize properly to prevent altitude sickness.</li>
+          <li>Carry warm clothing, even in summer months.</li>
+          <li>Ensure necessary permits are obtained for certain areas.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://assets.cntraveller.in/photos/65f445fc8411ed4511e9a4c9/4:3/w_4992,h_3744,c_limit/GettyImages-110051777.jpg" alt="Kerala backwaters" />
+        <h3>Kerala</h3>
+        <p style="padding: 0 1rem 0rem; ">Kerala, dubbed "God's Own Country," boasts tranquil backwaters, lush greenery, and rich cultural traditions. From houseboat cruises in Alleppey to tea plantations in Munnar, it offers a diverse and rejuvenating experience.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Alleppey Backwaters</li>
+            <li>Munnar</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Book houseboats in advance during peak seasons.</li>
+          <li>Use mosquito repellent, especially near water bodies.</li>
+          <li>Respect local customs and dress modestly when visiting temples.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://www.andamanislands.com/uploads/andamanislands/blog/main/5fa40347e356f155_history_of_andaman_islands.jpg" alt="Andaman and Nicobar Islands beach" />
+        <h3>Andaman and Nicobar Islands</h3>
+        <p style="padding: 0 1rem 0rem; ">The Andaman and Nicobar Islands are a tropical paradise with pristine beaches, crystal-clear waters, and vibrant marine life. Ideal for snorkeling, diving, and exploring colonial history, they offer both adventure and relaxation.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Radhanagar Beach</li>
+            <li>Cellular Jail</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Carry valid ID for permit requirements.</li>
+          <li>Avoid plastic usage to protect the environment.</li>
+          <li>Check weather conditions before planning water activities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Abroad</h3>
+    <div class="cards">
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://media.istockphoto.com/id/902966276/photo/kyoto-japan-in-spring.jpg?s=612x612&w=0&k=20&c=BKgo2TEXikd7oaZdFJ2o9VrKmG5NhNswI5YBXvhOwWA=" alt="Kyoto cherry blossoms" />
+        <h3>Kyoto</h3>
+        <p style="padding: 0 1rem 0rem; ">Kyoto, Japan's cultural heart, is famed for its ancient temples, traditional wooden houses, and serene gardens. As a former imperial capital, it offers a glimpse into Japan's rich history and timeless traditions.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Kinkaku-ji (Golden Pavilion)</li>
+            <li>Fushimi Inari Shrine</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Purchase a Kyoto City Bus Pass for convenient travel.</li>
+          <li>Respect local customs, especially in religious sites.</li>
+          <li>Learn basic Japanese phrases for smoother interactions.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://www.santoriniexperts.com/wp-content/uploads/sunset-santorini.jpg" alt="Santorini sunset view" />
+        <h3>Santorini, Greece</h3>
+        <p style="padding: 0 1rem 0rem; ">Santorini, a gem of the Aegean Sea, is known for its whitewashed buildings, blue-domed churches, and breathtaking sunsets. The island's volcanic history and stunning vistas make it a romantic and picturesque destination.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Oia Village</li>
+            <li>Red Beach</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Book accommodations well in advance during peak seasons.</li>
+          <li>Wear sturdy footwear for exploring uneven terrains.</li>
+          <li>Stay hydrated and use sun protection.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg" alt="Queenstown, New Zealand" />
+        <h3>New Zealand</h3>
+        <p style="padding: 0 1rem 0rem; ">Queenstown, nestled on the shores of Lake Wakatipu, is New Zealand's adventure capital. Surrounded by the Southern Alps, it offers activities like bungee jumping, skiing, and wine tasting amidst stunning landscapes.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>The Remarkables</li>
+            <li>Arrowtown</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Dress in layers to adapt to changing weather.</li>
+          <li>Book adventure activities in advance.</li>
+          <li>Drive cautiously; roads can be winding and narrow.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="max-width: 600px;" onclick="location.href='packages.html'">
+        <img src="https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?cs=srgb&dl=pexels-davifnr-2064827.jpg&fm=jpg" alt="Colosseum in Rome" />
+        <h3>Rome, Italy</h3>
+        <p style="padding: 0 1rem 0rem; ">Rome, the Eternal City, is a tapestry of ancient ruins, Renaissance art, and vibrant street life. From the Colosseum to Vatican City, it offers a journey through millennia of history and culture.<br>
+        <br>Must Visit Places: </p>
+        <ul>
+            <li>Colosseum</li>
+            <li>Trevi Fountain</li>
+        </ul>
+        <p style="padding: 0 1rem 0rem; ">Travel tips: </p>
+        <ul>
+          <li>Beware of pickpockets in crowded areas.</li>
+          <li>Wear comfortable shoes for cobblestone streets.</li>
+          <li>Purchase tickets online to skip long queues at major attractions.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

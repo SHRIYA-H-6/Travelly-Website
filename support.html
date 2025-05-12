@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travelly Support</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #b0e0e6); /* sky gradient */
+  overflow-x: hidden;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cloud styles */
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow:
+    30px 10px 0 0 white,
+    60px 15px 0 0 white,
+    30px 30px 0 0 white;
+  width: 60px;
+  height: 60px;
+}
+
+.cloud1 {
+  top: 50px;
+  left: 10%;
+  transform: scale(1.5);
+}
+
+.cloud2 {
+  top: 120px;
+  right: 15%;
+  transform: scale(1.2);
+}
+
+.cloud3 {
+  top: 200px;
+  left: 40%;
+  transform: scale(1.7);
+}
+
+header {
+  background: linear-gradient(to right, #ffdde1, #a0e7e5); /* light pink to light blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  color: #fefefe;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  color: #4b3f72;
+  margin-bottom: 15px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4b3f72;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a3260;
+}
+
+.faq {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.faq li a {
+  color: #4b3f72;
+  text-decoration: none;
+}
+
+.faq li a:hover {
+  text-decoration: underline;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.back-to-home {
+  display: inline-block;
+  background-color: #4b3f72;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #3a3260;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .cloud {
+    display: none; /* Hide clouds on small screens for simplicity */
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Decorative Clouds -->
+
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+
+  <header>
+    <h1>Support Center</h1>
+    <p>Your satisfaction is our priority. How can we assist you today?</p>
+  </header>
+
+  <main>
+    <!-- Contact Form Section -->
+    <section>
+      <h2>Contact Us</h2>
+      <form action="/submit-form" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required placeholder="Your email address">
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FAQ Section -->
+<section>
+  <h2>Frequently Asked Questions</h2>
+  <ul class="faq">
+    <li><a href="faq.html">How do I check bookings?</a></li>
+    <li><a href="faq.html">Where can I view my travel insurance?</a></li>
+    <li><a href="faq.html">How do I contact Travelly support?</a></li>
+  </ul>
+</section>
+
+<!-- Support Resources Section -->
+<section>
+  <h2>Support Resources</h2>
+  <ul>
+    <li><strong>Help Center:</strong> Access articles, how-to guides, and travel FAQs for instant solutions.</li>
+    <li><strong>Community Forum:</strong> Join discussions, ask questions, and share travel tips with fellow explorers.</li>
+    <li><strong>Live Chat:</strong> Connect with our support team in real-time for quick assistance.</li>
+    <li><strong>Email Support:</strong> Send us your queries at <a href="mailto:support@travelly.com">support@travelly.com</a>.</li>
+    <li><strong>Phone Support:</strong> Call us 24/7 at <a href="tel:+1800123456">+1-800-123-456</a>.</li>
+  </ul>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travelly. All rights reserved.</p>
+    <a href="index.html" class="back-to-home">Back to Home</a>
+  </footer>
+
+</body>
+</html>

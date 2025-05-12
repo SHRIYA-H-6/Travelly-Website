@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let’s Wander! 🗺️</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #4b3f72;
+            background: linear-gradient(135deg, #a0e7e5, #fdb2b2);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .discover-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #ffffff, #f9f1ff);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        .discover-container h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4b3f72;
+        }
+
+        .discover-container p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .faq {
+            margin-top: 40px;
+        }
+
+        .faq h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4b3f72;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: #ffe4f0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4b3f72;
+        }
+
+        .faq-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .faq-item h3::before {
+            content: "❓ ";
+        }
+
+        .faq-item p::before {
+            content: "🌟 ";
+        }
+
+        .discover-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .discover-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #4b3f72, #815bd4);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(75, 63, 114, 0.4);
+        }
+
+        .discover-links a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(75, 63, 114, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .discover-container h1 {
+                font-size: 2.5rem;
+            }
+
+            .discover-container p {
+                font-size: 1.1rem;
+            }
+
+            .discover-links a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .discover-container {
+                padding: 20px;
+            }
+
+            .discover-container h1 {
+                font-size: 2rem;
+            }
+
+            .discover-container p {
+                font-size: 1rem;
+            }
+
+            .discover-links a {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="discover-container">
+        <h1>🌍 Discover More About Us ! 🗺️</h1>
+        <p>Embarking on a journey isn’t just about the destination—it’s about the memories you create! 🌟 Imagine strolling through stunning landscapes, savoring exotic cuisines, and embracing vibrant cultures. ✈️ Traveling is your ticket to unforgettable adventures!</p>
+        <p>Our website is here to make your travel dreams come true! 💻 Whether you’re planning a relaxing getaway, an adventurous trek, or a cultural exploration, we’ve got you covered. From dreamy destinations to customized packages, we’ll make your journey seamless and exciting! 🎒</p>
+        <p>With expert recommendations and user-friendly tools, we simplify your travel planning. 🗺️ Our team is dedicated to curating the perfect experience just for you. So, pack your bags and get ready for the adventure of a lifetime! 🎉</p>
+
+        <div class="faq">
+            <h2>📝 Most Asked Questions !</h2>
+
+            <div class="faq-item">
+                <h3>Why should I choose this website for travel planning?</h3>
+                <p>We offer an all-in-one solution for stress-free travel! 🧳 Enjoy tailored packages, expert advice, and a hassle-free booking experience. 🌟</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What destinations do you cover?</h3>
+                <p>From famous landmarks to hidden gems, we cover it all! 🗽🗻 Whether it’s a tropical paradise or a snowy escape, your dream destination awaits! 🌴❄️</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I customize my travel package?</h3>
+                <p>Absolutely! 💼 Your journey is unique, and we’re here to make it truly yours. Tailor your package to fit your style and budget! ✨</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is traveling safe with your recommended packages?</h3>
+                <p>Safety first! 🛡️ We partner with trusted providers to ensure your journey is worry-free. Relax and enjoy with peace of mind! 🛬</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer travel insurance?</h3>
+                <p>Yes, we’ve got you covered! 🛡️ From unexpected delays to medical emergencies, our insurance plans provide comprehensive protection. 🩺</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What’s your cancellation policy?</h3>
+                <p>Plans changed? No worries! 🤷‍♂️ Our flexible cancellation policy ensures you can adapt without stress. Check package details for more info! 📜</p>
+            </div>
+        </div>
+
+        <div class="discover-links">
+            <a href="destinations.html">🌍 Explore Destinations</a>
+            <a href="packages.html">📦 View Packages</a>
+        </div>
+    </div>
+</body>
+</html>

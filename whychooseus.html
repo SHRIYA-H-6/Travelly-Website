@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Choose Us - Travelly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #a0e7e5; /* Changed the background color */
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #4b3f72;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .navbar .logo span {
+      color: #e0c3fc;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e0c3fc;
+    }
+
+    .why-choose-us {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .why-choose-us h2 {
+      font-size: 2.2rem;
+      color: #4b3f72;
+      margin-bottom: 2rem;
+    }
+
+    .reasons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .reason {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .reason:hover {
+      transform: translateY(-5px);
+    }
+
+    .reason img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .reason a {
+      text-decoration: none;
+      color: #4b3f72;
+    }
+
+    .reason h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reason p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 0.7rem;
+    }
+
+    .reason .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #4b3f72;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .reason .btn:hover {
+      background-color: #e0c3fc;
+    }
+
+    @media (max-width: 768px) {
+      .reasons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+      }
+
+      .nav-links li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fas fa-plane-departure"></i>
+      Travelly <span>Adventures</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Packages.html">Packages</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Why Choose Us Section -->
+
+  <section class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="reasons">
+
+      <!-- Expert Team -->
+      <div class="reason">
+        
+          <img src="https://img.freepik.com/free-vector/businesspeople-office-with-e-mail-marketing-icons_24877-51302.jpg" alt="Expert Team">
+          <h3>Expert Team</h3>
+        </a>
+        <p>Our dedicated team of travel experts ensures every journey is seamless and unforgettable. With years of experience and passion for exploration, we craft personalized experiences .</p>
+        
+        <a href="expert.html" class="btn">Visit Expert Team</a>
+      </div>
+
+      <!-- Customized Trips -->
+      <div class="reason">
+        
+          <img src="https://th.bing.com/th/id/OIP.YWkMOydsjyPH5DZR9O6SpgHaE1?w=235&h=180" alt="Customized Trips">
+          <h3>Customized Trips</h3>
+        </a>
+        <p>We believe every traveler is unique. That’s why we offer tailor-made packages to match your interests, style, and budget — ensuring a memorable and meaningful travel experience just for you.</p>
+        
+        <a href="customizetrips.html" class="btn">Visit Customized Trips</a>
+      </div>
+
+      <!-- 24/7 Support -->
+      <div class="reason">
+      
+          <img src="https://static.vecteezy.com/system/resources/previews/003/805/401/original/service-24-7-concept-call-center-support-illustration-flat-vector.jpg" alt="24/7 Support">
+          <h3>24/7 Support</h3>
+        </a>
+        <p>Travel with peace of mind knowing our support team is available around the clock. No matter where you are in the world, we’re just a call or message away to assist you at any moment.</p>
+        
+        <a href="support.html" class="btn">Visit 24/7 Support</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

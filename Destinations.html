@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Popular Destinations</title>
+  <style>
+    /* Global styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #a0e7e5;
+    }
+
+    .destinations {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+      background-size: cover;
+      color: #4b3f72;
+    }
+
+    .plan {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: url('https://png.pngtree.com/background/20250206/original/pngtree-yellow-sun-almost-down-horizon-over-deep-blue-sea-atmospheric-view-picture-image_15703335.jpg') no-repeat center center;
+      background-size: cover;
+      color: #4b3f72;
+    }
+
+    h2, .sub-head {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #4b3f72;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+      text-align: left;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem 1rem 0.5rem;
+      color: #3e8e7e;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      padding: 0 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card ul {
+    color: #555; 
+    font-size: 0.95rem;
+    margin: 0;
+    list-style-type: circle;
+    padding: 0 2rem 1.5rem;
+} 
+
+    .animated-btn {
+      position: relative;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+      transition: transform 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin: 1rem;
+    }
+
+    
+
+    .animated-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(100%, 100%);
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .destinations {
+        padding: 2rem 1rem;
+      }
+
+      h2, .sub-head {
+        font-size: 1.5rem;
+      }
+
+      .animated-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card img {
+        height: 150px;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <section class="destinations">
+    <h2>Popular Destinations</h2>
+
+    <h3 class="sub-head">In India</h3>
+    <div class="cards">
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal in Agra" />
+        <h3>Agra</h3>
+        <p>Home to the iconic Taj Mahal, one of the Seven Wonders of the World.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://plutotours.in/places/wp-content/uploads/2024/01/Tso-Moriri-2.webp" alt="Leh-Ladakh landscape" />
+        <h3>Leh-Ladakh</h3>
+        <p>Breathtaking landscapes, high-altitude lakes, and thrilling road trips.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://assets.cntraveller.in/photos/65f445fc8411ed4511e9a4c9/4:3/w_4992,h_3744,c_limit/GettyImages-110051777.jpg" alt="Kerala backwaters" />
+        <h3>Kerala</h3>
+        <p>Peaceful houseboat rides in Alleppey, lush tea gardens in Munnar, and Varkala beaches.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://www.andamanislands.com/uploads/andamanislands/blog/main/5fa40347e356f155_history_of_andaman_islands.jpg" alt="Andaman and Nicobar Islands beach" />
+        <h3>Andaman and Nicobar Islands</h3>
+        <p>Pristine white-sand beaches, scuba diving spots, and crystal-clear waters.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Abroad</h3>
+    <div class="cards">
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://media.istockphoto.com/id/902966276/photo/kyoto-japan-in-spring.jpg?s=612x612&w=0&k=20&c=BKgo2TEXikd7oaZdFJ2o9VrKmG5NhNswI5YBXvhOwWA=" alt="Kyoto cherry blossoms" />
+        <h3>Kyoto</h3>
+        <p>Known for its ancient temples, tranquil gardens, and stunning traditional architecture.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://www.santoriniexperts.com/wp-content/uploads/sunset-santorini.jpg" alt="Santorini sunset view" />
+        <h3>Santorini, Greece</h3>
+        <p>Whitewashed buildings, crystal-clear waters, and mesmerizing sunsets.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg" alt="Queenstown, New Zealand" />
+        <h3>New Zealand</h3>
+        <p>Dramatic landscapes, adventure sports, and vibrant natural beauty.</p>
+      </div>
+
+      <div class="card" onclick="location.href='packages.html'">
+        <img src="https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?cs=srgb&dl=pexels-davifnr-2064827.jpg&fm=jpg" alt="Colosseum in Rome" />
+        <h3>Rome, Italy</h3>
+        <p>Ancient ruins, stunning architecture, and a rich cultural heritage.</p>
+      </div>
+    </div>
+
+    <a href="hidden.html" class="animated-btn">Hidden Gems</a>
+    <a href="plan.html" class="animated-btn">Plan Your Trip</a>
+  </section>
+</body>
+</html>

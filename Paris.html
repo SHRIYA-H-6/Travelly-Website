@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✨ Paris Booking Form ✨</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4b91;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 16px rgba(255, 75, 145, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #3a3a8f;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6a6a6a;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .description p {
+      font-size: 1rem;
+      color: #3a3a8f;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #3a3a8f;
+    }
+
+    input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #fceef9; /* soft pastel pink */
+  transition: all 0.3s ease;
+}
+
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #3a3a8f;
+      box-shadow: 0 0 0 3px rgba(58, 58, 143, 0.2);
+      outline: none;
+    }
+
+    .date-range {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 14px;
+      background-color: #3a3a8f;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #2a2a6f;
+    }
+
+    label.checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    label.checkbox a {
+      color: #3a3a8f;
+      text-decoration: underline;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .package-description {
+      margin-top: 10px;
+      color: #6a6a6a;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #3a3a8f;
+      margin-top: 10px;
+    }
+
+    .price .original-price {
+      text-decoration: line-through;
+      margin-right: 10px;
+      color: #ff4b91;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🎉 Best Seller! 25% OFF</div>
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Beautiful view of Paris at night with Eiffel Tower" />
+      <div class="package-description">
+        <p>✨ 4 Days & 3 Nights in the heart of Paris</p>
+        <p class="price">
+          <span class="original-price">₹80,000</span> For you: ₹60,000 🎉
+        </p>
+      </div>
+    </div>
+    <h1>🌟 Book Your Dream Trip to Paris 🌟</h1>
+    <p class="subtitle">🚀 Paris is our most loved destination! Book now and get a special 25% discount on early reservations. 🍷🌿</p>
+    <div class="description">
+      <p>Includes luxury hotel stay, daily breakfast, guided tours, and complimentary airport transfers! 
+         <strike>₹80,000</strike> <span style="color: #ff4b91; font-weight: bold;">Special Price: ₹60,000 per person (25% OFF!)</span></p>
+    </div>
+    <form>
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="aadhaar">🇮🇳 Aadhaar Number</label>
+      <input type="text" id="aadhaar" name="aadhaar" required />
+
+      <label for="passport">🏛️ Passport Number</label>
+      <input type="text" id="passport" name="passport" required />
+
+      <label for="people">👥 Number of People</label>
+      <input type="number" id="people" name="people" min="1" required />
+
+      <label for="hotel">🏨 Preferred Hotel</label>
+      <select id="hotel" name="hotel">
+        <option>Hotel de Lumière</option>
+        <option>Parisian Dream Inn</option>
+        <option>Champs-Élysées Stay</option>
+      </select>
+
+      <label for="stay">📅 Travel Dates</label>
+      <div class="date-range">
+        <input type="date" name="from" required />
+        <input type="date" name="to" required />
+      </div>
+
+      <label for="requests">💭 Special Requests or Dietary Preferences</label>
+      <textarea id="requests" rows="4" name="requests"></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" required />
+        I agree to the <a href="terms.html" target="_blank">terms and conditions</a>
+      </label>
+
+      <button type="submit">🚀 Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>

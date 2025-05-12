@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+    body {
+      background-color: #a0e7e5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-title {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .subsection-title {
+      font-size: 2rem;
+      color: #ffffff;
+      margin: 3rem 0 1.5rem;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="gallery">
+    <h2 class="section-title">📸 Travel Gallery</h2>
+
+    <!-- Beach Section -->
+    <h3 class="subsection-title">🏖 Beaches</h3>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Beach">
+      <img src="https://th.bing.com/th/id/R.2bd767af5fad8a1898550352b8b2facb?rik=0c%2bg3P7xOuq9zg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fMAZM4pd.jpg&ehk=FiJeLS8ImEfjenOLvaVAP4%2fIPqWdl19obV%2fjHnSsYQc%3d&risl=&pid=ImgRaw&r=0" alt="Beach">
+      <img src="https://th.bing.com/th/id/OIP.HA51aC03AYFnHW5KY8R1OAHaEK" alt="Beach">
+      <img src="https://i.pinimg.com/originals/7d/44/d4/7d44d483349cd43475636b4bae24ac6c.jpg" alt="Beach">
+    </div>
+
+    <!-- Mountain Section -->
+    <h3 class="subsection-title">🏔 Mountains</h3>
+    <div class="gallery-grid">
+      <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress" alt="Mountain">
+      <img src="https://images.pexels.com/photos/4652275/pexels-photo-4652275.jpeg?auto=compress" alt="Mountain">
+      <img src="https://th.bing.com/th/id/OIP.Me0Cmn-T2ZGygd3lxLAKUQHaEo?rs=1" alt="Mountain">
+      <img src="https://www.mattpaynephotography.com/images/xl/San-Juan-Mountains-Sunrise-Panorama.jpg" alt="Mountain">
+    </div>
+
+    <!-- City Section -->
+    <h3 class="subsection-title">🏙 Cities</h3>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=500" alt="City">
+      <img src="https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?auto=compress" alt="City">
+    </div>
+  </section>
+
+</body>
+</html>
